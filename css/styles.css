@@ -538,6 +538,7 @@ h1, h2, h3, h4, h5, h6 {
   .how-to-get__img {
     width: 50%;
     order: 2;
+    border-bottom-right-radius: 6px;
   }
 }
 @media (min-width: 1440px) {
