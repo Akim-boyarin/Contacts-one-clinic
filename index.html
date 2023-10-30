@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,110 @@
     <title>One clinic contacts</title>
 </head>
 <body>
-    <p class="text">Text</p>
+    <div class="one-clinic-contacts">
+        <!-- base-info -->
+        <div class="one-clinic-contacts__base-info base-info">
+            <img class="base-info__img" src="./img/clinic_top_img.png" alt="">
+            <div class="base-info__text base-info-text">
+                <h1 class="base-info-text__title">Lahta Junior на Савушкина</h1>
+                <p class="base-info-text__address">Санкт-Петербург, ул. Савушкина, 73/50</p>
+                <div class="base-info-text__contacts">
+                    <a class="base-info-text__tel" href="tel:+78126402868">+7 (812) 640-28-68</a>
+                    <a class="base-info-text__email" href="mailto:info@lahtajunior.ru">info@lahtajunior.ru</a>
+                </div>
+                <p class="base-info-text__text default-text">
+                    Медицинский центр Lahta Junior на ул. Савушкина, д. 73 находится в Приморском районе, в пешей доступности от метро «Старая деревня». Клиника расположена на первом этаже жилого дома, вход осуществляется с ул. Дибуновская.
+                </p>
+                <div class="base-info-text__bottom-part">
+                    <div class="base-info-text__worktime">
+                        <h4 class="base-info-text__worktime-subtitle">Режим работы:</h4>
+                        <p class="base-info-text__worktime-value">c 9:00 до 21:00, без выходных</p>
+                    </div>
+                    <button class="base-info-text__appoint-button" type="button">Записаться на приём</button>
+                </div>
+            </div>
+        </div>
+        <!-- map -->
+        <div class="one-clinic-contacts__map map">
+            <div class="map__block" id="map"></div>
+            <script src="https://api-maps.yandex.ru/v3/?apikey=308a52da-7266-4d31-973b-d0fe4bf31d55&lang=ru_RU"></script>
+            <div class="map__text">
+                <div class="map-text">
+                    <h2 class="map-text__subtitle default-subtitle">Парковка</h2>
+                    <p class="map-text__text default-text">В день визита, вы можете воспользоваться парковкой на территории жилого комплекса, въезд осуществляется с ул. Савушкина, через шлагбаум напротив клиники Lahta Clinic.</p>
+                    <p class="map-text__text default-text">Для того чтобы заехать на парковку, необходимо подъехать максимально близко к одинарному шлагбауму и позвонить по номеру телефона колл-центра 640–28–68.</p>
+                </div>
+                <button class="map-text-route-button" type="button">
+                    <div class="map-text-route-button__first-offset">
+                        <div class="map-text-route-button__content-container">
+                            <div class="map-text-route-button__icon">
+                                <!-- svg -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5786 10.928L17.8973 23.1493C17.472 24.256 15.92 24.292 15.5893 23.2026L14.18 18.5666C14.1269 18.3902 14.031 18.2296 13.9007 18.0993C13.7704 17.969 13.6098 17.873 13.4333 17.82L8.7973 16.4106C7.70796 16.08 7.74396 14.528 8.85063 14.104L21.072 9.41998C21.2828 9.33117 21.5154 9.30725 21.74 9.35128C21.9645 9.3953 22.1708 9.50528 22.3326 9.66716C22.4943 9.82903 22.6041 10.0354 22.6479 10.26C22.6918 10.4846 22.6676 10.7172 22.5786 10.928Z" fill="url(#paint0_linear_101_431)"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5786 10.928L17.8973 23.1493C17.472 24.256 15.92 24.292 15.5893 23.2026L14.18 18.5666C14.1269 18.3902 14.031 18.2296 13.9007 18.0993C13.7704 17.969 13.6098 17.873 13.4333 17.82L8.7973 16.4106C7.70796 16.08 7.74396 14.528 8.85063 14.104L21.072 9.41998C21.2828 9.33117 21.5154 9.30725 21.74 9.35128C21.9645 9.3953 22.1708 9.50528 22.3326 9.66716C22.4943 9.82903 22.6041 10.0354 22.6479 10.26C22.6918 10.4846 22.6676 10.7172 22.5786 10.928Z" fill="url(#paint1_linear_101_431)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_101_431" x1="2.66711" y1="16.2115" x2="29.3338" y2="16.2115" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#5C58F2"/>
+                                            <stop offset="1" stop-color="#2FC5EE"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_101_431" x1="2.66711" y1="16.2115" x2="29.3338" y2="16.2115" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#5C58F2"/>
+                                            <stop offset="1" stop-color="#2FC5EE"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <p class="map-text-route-button__text">Построить маршрут</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <!-- how-to-get -->
+        <div class="one-clinic-contacts__how-to-get how-to-get">
+            <div class="how-to-get__text how-to-get-text">
+                <div class="how-to-get-text__text-part">
+                    <h2 class="how-to-get-text__subtitle default-subtitle">Доехать на автомобиле</h2>
+                    <p class="how-to-get-text__text default-text">
+                        Из центральных районов города до клиники удобно добраться по Приморскому проспекту, после Ушаковской развязки свернуть направо на улицу Оскаленко или Липовую аллею и выехать на улицу Савушкина. Из других районов города по КАД или ЗСД, съезд на Богатырский или Приморский проспекты.
+                    </p>
+                </div>
+                <div class="how-to-get-text__text-part">
+                    <h2 class="how-to-get-text__subtitle default-subtitle">Добраться от метро</h2>
+                    <h3 class="how-to-get-text__small-subtitle default-small-subtitle">«Старая деревня»</h3>
+                    <p class="how-to-get-text__text default-text">
+                        Дорога от метро займёт всего 5–7 минут пешком: выйти из метро на Торфяную дорогу (переходит в Липовую аллею), перейти через ж/д переезд и дойти до перекрёстка с улицей Савушкина. На перекрёстке ― налево, клиника располагается на первом этаже жилого комплекса с башней.
+                    </p>
+                    <h3 class="how-to-get-text__small-subtitle default-small-subtitle">«Черная речка»</h3>
+                    <p class="how-to-get-text__text default-text">
+                        20 минут пешком по улице Савушкина или пару остановок на любом общественном транспорте (автобусы: 32, 211; трамваи: 21, 48). Остановка «Улица Покрышева» или «Липовая аллея».
+                    </p>
+                </div>
+            </div>
+            <img class="how-to-get__img" src="./img/clinic_bottom_img.png" alt="">
+        </div>
+    </div>
+    <script>
+        // page logick
+        async function initMap() {
+            await ymaps3.ready;
+
+            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+
+            let mapBlock = document.querySelector("#map");
+            let settings = {
+                location: {
+                    center: [30.333415131705216, 59.95492593869323],
+                    zoom: 12
+                },
+            };
+
+            const map = new YMap(mapBlock, settings);
+
+            map.addChild(new YMapDefaultSchemeLayer());
+        }
+
+        initMap();
+    </script>
 </body>
 </html>

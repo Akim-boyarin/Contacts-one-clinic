@@ -1,8 +1,10 @@
-body {
-    margin: 0px;
-    padding: 0px;
-}
+// tools
+@import "./nullstyle.scss";
+@import "./fonts.scss";
+@import "./mixins.scss";
 
-.text {
-    color: red;
-}
+// styles
+@import "./base.scss";
+@import "./base-info.scss";
+@import "./map.scss";
+@import "./how-to-get.scss";
