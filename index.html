@@ -33,7 +33,6 @@
         <!-- map -->
         <div class="one-clinic-contacts__map map">
             <div class="map__block" id="map"></div>
-            <script src="https://api-maps.yandex.ru/v3/?apikey=308a52da-7266-4d31-973b-d0fe4bf31d55&lang=ru_RU"></script>
             <div class="map__text">
                 <div class="map-text">
                     <h2 class="map-text__subtitle default-subtitle">Парковка</h2>
@@ -90,24 +89,72 @@
             <img class="how-to-get__img" src="./img/clinic_bottom_img.png" alt="">
         </div>
     </div>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=308a52da-7266-4d31-973b-d0fe4bf31d55&lang=ru_RU"></script>
     <script>
         // page logick
         async function initMap() {
             await ymaps3.ready;
 
-            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
 
             let mapBlock = document.querySelector("#map");
-            let settings = {
+            let mapSettings = {
                 location: {
-                    center: [30.333415131705216, 59.95492593869323],
+                    center: [30.26080948258395, 59.98431977433872],
                     zoom: 12
                 },
             };
 
-            const map = new YMap(mapBlock, settings);
-
+            const map = new YMap(mapBlock, mapSettings);
             map.addChild(new YMapDefaultSchemeLayer());
+
+            // create marker in center
+            map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
+            
+            let markerSettings = {
+                coordinates: mapSettings.location.center,
+                draggable: false,
+                mapFollowsOnDrag: true,
+            };
+            let markerBlock = createMarkerBlock();
+
+            let marker = new YMapMarker(markerSettings, markerBlock);
+            map.addChild(marker);
+        }
+        function createMarkerBlock() {
+            let markerBlock = document.createElement("div");
+            
+            let markerBlockStyles = {
+                width: '30px',
+                height: '30px',
+                position: 'relative',
+                top: '-30px',
+                left: '-15px',
+            };
+            for (let styleName in markerBlockStyles) {
+                markerBlock.style[styleName] = markerBlockStyles[styleName];
+            }
+
+            let markerBlockContent = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 31 30" fill="none">
+                    <path d="M31 30H12L20 18L31 30Z" fill="url(#paint0_linear_101_349)" fill-opacity="0.2"/>
+                    <path d="M24 12.0968C24 18.7776 12 30 12 30C12 30 0 18.7776 0 12.0968C0 5.41591 5.37258 0 12 0C18.6274 0 24 5.41591 24 12.0968Z" fill="url(#paint1_linear_101_349)"/>
+                    <circle cx="12" cy="11" r="4" fill="white"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_101_349" x1="12" y1="30" x2="20" y2="30" gradientUnits="userSpaceOnUse">
+                            <stop/>
+                            <stop offset="1" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_101_349" x1="12.48" y1="30" x2="12.48" y2="5.56434e-07" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#5C58F2"/>
+                            <stop offset="1" stop-color="#2FC5EE"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            `;
+            markerBlock.innerHTML = markerBlockContent;
+
+            return markerBlock;
         }
 
         initMap();
