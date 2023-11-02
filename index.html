@@ -120,6 +120,12 @@
 
             let marker = new YMapMarker(markerSettings, markerBlock);
             map.addChild(marker);
+
+            // make map grey
+            // setTimeout(() => {
+            //     let canvasPart = document.querySelector(".map canvas");
+            //     console.log(canvasPart);
+            // }, 2000);
         }
         function createMarkerBlock() {
             let markerBlock = document.createElement("div");

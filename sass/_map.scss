@@ -5,7 +5,6 @@
     &__block {
         width: 100%;
         height: 290px;
-        filter: grayscale(1);
         @media (min-width: 500px) {
             height: 350px;
         }
@@ -86,4 +85,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+// Black-and-white map
+*[class*="main-engine-container"] {
+    filter: grayscale(1);
 }
