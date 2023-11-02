@@ -95,13 +95,14 @@
         async function initMap() {
             await ymaps3.ready;
 
-            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+            const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapListener } = ymaps3;
 
+            // map
             let mapBlock = document.querySelector("#map");
             let mapSettings = {
                 location: {
                     center: [30.26080948258395, 59.98431977433872],
-                    zoom: 12
+                    zoom: 15,
                 },
             };
 
