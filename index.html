@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="how-to-get__animation-container">
-                <video class="how-to-get__animation" id="animation" src="./video/Lahta_Clinic_Map.mp4" autoplay loop></video>
+                <video class="how-to-get__animation" id="animation" src="./video/Lahta_Clinic_Map.mp4" autoplay loop mute></video>
             </div>
         </div>
     </div>
@@ -165,11 +165,14 @@
         initMap();
 
         // animation
-        let animation = document.querySelector("#animation");
-        console.log(animation);
-        setTimeout(() => {
-            animation.play();
-        }, 100);
+        // let animationWasRun = false;
+        // function runAnimationPlay() {
+        //     let animation = document.querySelector("#animation");
+        //     if (!animationWasRun) {
+        //         animation.play();
+        //     }
+        // }
+        // window.addEventListener("scroll", runAnimationPlay);
     </script>
 </body>
 </html>
