@@ -170,6 +170,7 @@
             let animation = document.querySelector("#animation");
             if (!animationWasRun) {
                 animation.play();
+                animationWasRun = true;
             }
         }
         window.addEventListener("scroll", runAnimationPlay);
