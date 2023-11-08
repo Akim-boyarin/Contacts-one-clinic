@@ -165,14 +165,14 @@
         initMap();
 
         // animation
-        // let animationWasRun = false;
-        // function runAnimationPlay() {
-        //     let animation = document.querySelector("#animation");
-        //     if (!animationWasRun) {
-        //         animation.play();
-        //     }
-        // }
-        // window.addEventListener("scroll", runAnimationPlay);
+        let animationWasRun = false;
+        function runAnimationPlay() {
+            let animation = document.querySelector("#animation");
+            if (!animationWasRun) {
+                animation.play();
+            }
+        }
+        window.addEventListener("scroll", runAnimationPlay);
     </script>
 </body>
 </html>
