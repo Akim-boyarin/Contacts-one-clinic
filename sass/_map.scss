@@ -53,25 +53,25 @@
     display: inline-block;
     background: linear-gradient(90deg, rgba(84,90,240,1) 14%, rgba(0,200,238,1) 85%);
     padding: 1px;
-    border-radius: 20px;
+    border-radius: 24px;
     &__first-offset {
         width: 100%;
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: 24px;
     }
     &__content-container {
         position: relative;
         @include flex(row, center, center);
-        padding: 10px 24px;
-        padding-left: 56px;
-        padding-top: 13px;
+        padding: 14px 43px;
+        padding-left: 67px;
+        padding-top: 15px;
     }
     &__icon {
         width: 32px;
         height: 32px;
         position: absolute;
-        top: 4px;
-        left: 20px;
+        top: 6px;
+        left: 33px;
     }
     &__text {
         font-family: "Lato";

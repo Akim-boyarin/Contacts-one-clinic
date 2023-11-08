@@ -36,6 +36,25 @@
             width: 35%;
         }
     }
+    &__animation-container {
+        order: 1;
+        display: block;
+        width: 100%;
+        @media (min-width: 1200px) {
+            width: 50%;
+            order: 2;
+            border-bottom-right-radius: 6px;
+        }
+        @media (min-width: 1440px) {
+            width: 40%;
+        }
+        @media (min-width: 1700px) {
+            width: 35%;
+        }
+    }
+    &__animation {
+        width: 100%;
+    }
 }
 
 .how-to-get-text {

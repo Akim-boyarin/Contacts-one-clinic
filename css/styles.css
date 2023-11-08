@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .base-info-text__contacts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 24px;
@@ -302,6 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 125%;
   color: #545A66;
   margin-bottom: 5px;
+  margin-right: 6px;
 }
 @media (min-width: 410px) {
   .base-info-text__tel {
@@ -453,12 +454,12 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   background: linear-gradient(90deg, rgb(84, 90, 240) 14%, rgb(0, 200, 238) 85%);
   padding: 1px;
-  border-radius: 20px;
+  border-radius: 24px;
 }
 .map-text-route-button__first-offset {
   width: 100%;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 24px;
 }
 .map-text-route-button__content-container {
   position: relative;
@@ -466,16 +467,16 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 24px;
-  padding-left: 56px;
-  padding-top: 13px;
+  padding: 14px 43px;
+  padding-left: 67px;
+  padding-top: 15px;
 }
 .map-text-route-button__icon {
   width: 32px;
   height: 32px;
   position: absolute;
-  top: 4px;
-  left: 20px;
+  top: 6px;
+  left: 33px;
 }
 .map-text-route-button__text {
   font-family: "Lato";
@@ -554,6 +555,31 @@ h1, h2, h3, h4, h5, h6 {
   .how-to-get__img {
     width: 35%;
   }
+}
+.how-to-get__animation-container {
+  order: 1;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .how-to-get__animation-container {
+    width: 50%;
+    order: 2;
+    border-bottom-right-radius: 6px;
+  }
+}
+@media (min-width: 1440px) {
+  .how-to-get__animation-container {
+    width: 40%;
+  }
+}
+@media (min-width: 1700px) {
+  .how-to-get__animation-container {
+    width: 35%;
+  }
+}
+.how-to-get__animation {
+  width: 100%;
 }
 
 .how-to-get-text {
