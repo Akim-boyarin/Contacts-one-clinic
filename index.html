@@ -87,13 +87,15 @@
                 </div>
             </div>
             <div class="how-to-get__animation-container">
-                <video class="how-to-get__animation"  src="./video/Lahta_Clinic_Map.mp4" autoplay loop></video>
+                <video class="how-to-get__animation" id="animation" src="./video/Lahta_Clinic_Map.mp4" autoplay loop></video>
             </div>
         </div>
     </div>
     <script src="https://api-maps.yandex.ru/v3/?apikey=308a52da-7266-4d31-973b-d0fe4bf31d55&lang=ru_RU"></script>
     <script>
-        // page logick
+        // page logic
+
+        // map
         async function initMap() {
             await ymaps3.ready;
 
@@ -161,6 +163,10 @@
         }
 
         initMap();
+
+        // animation
+        let animation = document.querySelector("#animation");
+        animation.play();
     </script>
 </body>
 </html>
