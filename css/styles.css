@@ -446,8 +446,18 @@ h1, h2, h3, h4, h5, h6 {
 .map-text__subtitle {
   margin-bottom: 16px;
 }
-.map-text__text {
+.map-text__text-container p {
+  font-family: "Lato";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
   margin-bottom: 8px;
+}
+@media (min-width: 1440px) {
+  .map-text__text-container p {
+    font-size: 16px;
+  }
 }
 
 .map-text-route-button {
@@ -614,6 +624,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1440px) {
   .how-to-get-text__text {
+    margin-bottom: 24px;
+  }
+}
+.how-to-get-text div {
+  margin-bottom: 20px;
+}
+@media (min-width: 1440px) {
+  .how-to-get-text div {
+    margin-bottom: 48px;
+  }
+}
+.how-to-get-text h2 {
+  font-family: "Lato";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  color: #545A66;
+  margin-bottom: 13px;
+}
+@media (min-width: 1100px) {
+  .how-to-get-text h2 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .how-to-get-text h2 {
+    margin-bottom: 16px;
+  }
+}
+.how-to-get-text h3 {
+  font-family: "Lato";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 7px;
+}
+@media (min-width: 1440px) {
+  .how-to-get-text h3 {
+    font-size: 16px;
+  }
+}
+.how-to-get-text p {
+  font-family: "Lato";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 6px;
+}
+@media (min-width: 1440px) {
+  .how-to-get-text p {
+    font-size: 16px;
     margin-bottom: 24px;
   }
 }/*# sourceMappingURL=styles.css.map */

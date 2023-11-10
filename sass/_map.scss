@@ -45,10 +45,21 @@
     &__subtitle {
         margin-bottom: 16px;
     }
-    &__text {
-        margin-bottom: 8px;
+    &__text-container {
+        p {
+            font-family: "Lato";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 8px;
+            @media (min-width: 1440px) {
+                font-size: 16px;
+            }
+        }
     }
 }
+
 .map-text-route-button {
     display: inline-block;
     background: linear-gradient(90deg, rgba(84,90,240,1) 14%, rgba(0,200,238,1) 85%);
