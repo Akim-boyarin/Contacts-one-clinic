@@ -414,6 +414,13 @@ h1, h2, h3, h4, h5, h6 {
     height: 550px;
   }
 }
+.map__marker {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -30px;
+  left: -15px;
+}
 .map__text {
   padding: 30px 20px 40px;
 }
